@@ -52,6 +52,9 @@ ul
   align-items: center
   height: 100px
 
+.header__logo
+  margin-left: 115px
+
 .list-contacts
   display: flex
   gap: 30px
@@ -108,7 +111,6 @@ ul
   margin-bottom: 150px
 
 .section__title
-  margin-bottom: 25px
   text-transform: uppercase
   color: $color-accent
   font-size: 18px
@@ -117,13 +119,15 @@ ul
 // CONCEPT
 
 .concept__inner
+  display: flex
+  flex-direction: column
   max-width: 900px
   margin-left: auto
+  gap: 25px
 
 .concept__text
   font-size: 24px
   line-height: 1.2
-  margin-bottom: 25px
 
 // FOOTER
 
@@ -133,4 +137,50 @@ ul
     align-items: center
     height: 300px
 
+// PREMIER
 
+.premier__inner
+  display: flex
+  gap: 60px
+
+.premier__column
+  display: flex
+  flex-direction: column
+  gap: 25px
+
+.btn
+  font-family: 'Corporate-A-Bold'
+  font-size: 18px
+  line-height: 1.2
+  text-transform: uppercase
+  color: $color-accent
+  padding: 14px
+  border: 1px solid $color-accent
+  transition: all .3s
+  path
+    transition: .3s
+
+
+.premier__btn
+  display: block
+  width: 100%
+  text-align: center
+
+.btn:hover
+  color: $color-hover-blue
+  border-color: $color-hover-blue
+  path
+    fill: $color-hover-blue
+  
+// VIDEO
+
+.video__img
+    margin-bottom: 25px
+
+.video__btn
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  gap: 10px
+  
