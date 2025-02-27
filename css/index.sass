@@ -16,6 +16,9 @@ html
   font-family: 'Corporate-A-Bold'
   src: url('../vendor/fonts/Corporate-A-Bold.woff2') format('woff2'), url('../vendor/fonts/Corporate-A-Bold.woff') format ('woff')
 
+img
+  max-width: 100%
+
 a
   text-decoration: none
   color: inherit
@@ -183,7 +186,7 @@ ul
 
 .design__interior
   display: grid
-  grid-template-columns: 255px 255px auto 330px
+  grid-template-columns: 1fr 3fr
   grid-template-rows: auto auto
   gap: 14px 44px
   margin-bottom: 100px
@@ -191,19 +194,16 @@ ul
 .design__cell-one
   display: flex
   flex-direction: column
-  grid-row: 1/3
+  grid-row: 1 / 3
   gap: 25px
 
 .design__cell-two
   grid-row-end: -1
   display: flex
   align-items: flex-end
-
-.design__cell-three
-  grid-column-end: -1
-  grid-row-end: -1
-  display: flex
-  align-items: flex-end
+  justify-content: space-between
+  .design__cell-text
+    max-width: 255px
 
 .design__slider
   margin-bottom: 150px
@@ -212,6 +212,9 @@ ul
 .design__slider-item
   margin: 0 30px
   max-width: 450px
+
+.design__interior-img
+  grid-column: 2 / -1
 
 .arrow
   position: absolute
@@ -254,4 +257,116 @@ ul
     justify-content: space-between
     align-items: center
     height: 300px
+
+@media (max-width: 1002px)
+  .design__interior
+    grid-template-columns: 2fr 2fr
+    gap: 25px 44px
+
+
+  .design__cell-one
+    grid-row: 1 / 2
+
+  .design__cell-two
+    grid-row-end: -1
+    grid-column: 1 / 3
+    display: flex
+    align-items: flex-end
+
+
+  .design__cell-two
+    grid-row-end: -1
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    .design__cell-text
+      max-width: 50%
+      order: 2
+
+
+@media (max-width: 1366px)
+  .footer__inner
+    height: 150px
+
+
+@media (max-width: 768px)
+  .section
+    margin-bottom: 75px
+
+  .header__logo
+    margin-left: 0
+  .logo__img
+    width: 180px
+  .list-contacts
+    gap: 15px
+  .list-contacts__link
+    width: 25px
+    height: 25px
+  .title
+    font-size: 55px
+  .title-descr
+    font-size: 18px
+
+  .concept__text
+    font-size: 16px
+
+  .premier__inner
+    flex-direction: column
+    gap: 50px
+  
+  .design__interior
+    display: flex
+    flex-direction: column
+    gap: 50px
+  .design__cell-two
+    .design__interior-img
+      max-width: 50%
+      margin-right: 15px
+  .design__slider
+    margin-bottom: 75px
+  .design__box
+    margin: 75px auto
+    display: block
+  .design__box-colimn
+    width: 100px
+
+  .footer__inner
+    flex-wrap: wrap
+    align-content: center
+    .list-contacts
+      margin-top: 25px
+      width: 100%
+      justify-content: center
+
+
+
+@media (max-width: 520px)
+  .header__top
+    flex-wrap: wrap
+    align-content: center
+  .list-contacts
+    justify-content: center
+    padding: 0
+    width: 100%
+  .title
+    font-size: 34px
+      
+  .design__cell-two
+    flex-direction: column
+    gap: 25px
+    .design__interior-img
+      max-width: 100%
+      width: 100%
+      order: 2
+    .design__cell-text
+      max-width: 100%
+      order: 1
+
+  .footer__inner
+    flex-direction: column
+
+@media (max-width: 361px)
+  .design__slider-item
+    margin: 0
+
 
